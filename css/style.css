@@ -1,0 +1,175 @@
+@import url("header.css");
+:root {
+    --bleu: #0065fc;
+    --bclair: #DEEBFF;
+    --gris: #f2F2F2;
+}
+
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+body>* {
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+}
+
+body>*:not(header) {
+    padding: 1rem;
+    width: calc(100% - 2rem);
+}
+
+main {
+    background-color: var(--gris);
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+h2 {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.1em;
+    font-weight: normal;
+}
+
+.populaires h1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.populaires h1::after {
+    content: "\f201";
+    font-family: 'Font Awesome 5 Free';
+}
+
+article {
+    background-color: white;
+    border-radius: 1rem;
+}
+
+article img {
+    grid-area: photo;
+    width: 100%;
+    height: calc(100% - 4px);
+    object-fit: cover;
+}
+
+.populaires article {
+    display: grid;
+    grid-template-areas: "photo titre" "photo description" "photo etoiles";
+    margin-bottom: 1rem;
+    column-gap: 1rem;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: repeat(3, 3rem);
+}
+
+.populaires article img {
+    border-radius: 1rem 0 0 1rem;
+    border: 2px solid white;
+}
+
+.etoiles {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: bold;
+    grid-area: etoiles;
+}
+
+.etoiles::before {
+    color: var(--bleu);
+}
+
+.etoiles::after {
+    color: var(--gris);
+}
+
+.cinqEtoiles::before {
+    content: "\f005\f005\f005\f005\f005";
+}
+
+.quatreEtoiles::before {
+    content: "\f005\f005\f005\f005";
+}
+
+.quatreEtoiles::after {
+    content: "\f005";
+}
+
+/* debugage */
+figure img {
+    width: 200px;
+}
+
+body * {
+    /* border: 1px solid red; */
+}
+
+/* fin debuggage */
+
+/*
+balise1
+{
+    propriete1: valeur1;
+    propriete2: valeur2;
+    propriete3: valeur3;
+}
+
+balise2
+{
+    propriete1: valeur1;
+    propriete2: valeur2;
+    propriete3: valeur3;
+    propriete4: valeur4;
+}
+
+balise3
+{
+    propriete1: valeur1;
+}
+
+balise1
+{
+    propriete1: valeur1;
+    propriete2: valeur2;
+    propriete3: valeur3;
+}
+
+balise2
+{
+    propriete1: valeur1;
+    propriete2: valeur2;
+    propriete3: valeur3;
+    propriete4: valeur4;
+}
+
+balise3
+{
+    propriete1: valeur1;
+}
+
+balise1
+{
+    propriete1: valeur1;
+    propriete2: valeur2;
+    propriete3: valeur3;
+}
+
+balise2
+{
+    propriete1: valeur1;
+    propriete2: valeur2;
+    propriete3: valeur3;
+    propriete4: valeur4;
+}
+
+balise3
+{
+    propriete1: valeur1;
+}
+*/

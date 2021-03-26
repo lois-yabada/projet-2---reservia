@@ -1,0 +1,159 @@
+header nav {
+    display: grid;
+    grid-template-areas: "logo inscrire" "hebergements activites";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 4rem 4rem;
+}
+
+header nav a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+header nav a, header nav a:visited{
+    color:black;
+}
+
+header nav a:first-of-type {
+    grid-area: logo;
+}
+
+header nav a:nth-of-type(2),
+header nav a:nth-of-type(3){
+    border-bottom: 1px solid var(--gris);
+}
+header nav a:nth-of-type(2) {
+    grid-area: hebergements;
+}
+
+header nav a:nth-of-type(3) {
+    grid-area: activites;
+}
+
+header nav a:last-of-type {
+    grid-area: inscrire;
+    font-weight: bold;
+    justify-content: flex-end;
+    width: calc(100% - 1rem);
+    color: var(--bleu);
+}
+
+header nav a:hover{
+    color: var(--bleu);
+}
+
+header nav a:nth-of-type(2):hover,
+header nav a:nth-of-type(3):hover{
+    border-bottom: 1px solid var(--bleu);
+}
+
+header section {
+    padding: 0 1rem;
+}
+
+header img {
+    height: 4rem;
+}
+
+header button {
+    background-color: #0065FC;
+    width: 3rem;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    justify-content: center;
+    margin-left: -1rem;
+}
+
+header button::after {
+    content: "\f002";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: bold;
+}
+
+header label {
+    display: flex;
+    align-items: center;
+    /* border: 1px solid var(--gris); */
+    border-radius: 1rem;
+}
+
+header label>* {
+    height: 3rem;
+    display: flex !important;
+    align-items: center;
+}
+
+header i {
+    background-color: var(--gris);
+    width: 4rem;
+    justify-content: center;
+    border-radius: 1rem 0 0 1rem;
+    border: 1px solid var(--gris);
+}
+
+header input {
+    /* border: none; */
+    width: calc( 100% - 5rem);
+    font-size: 1.1em;
+    font-weight: bold;
+    border: 1px solid var(--gris);
+}
+
+input marseille, france {}
+
+
+
+
+header ul {
+    /* border: 1px solid var(--gris); */
+    /* font-weight: bold; */
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+header li {
+    display: flex !important;
+    border: 2px solid var(--gris);
+    border-radius: 1rem;
+    color: var(--bleu);
+    align-items: center;
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+    padding-right: 1rem;
+}
+
+header li::before {
+    background-color: var(--bclair);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-right: .5rem;
+    margin-left: -.1rem;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: bold;
+}
+
+header li.eco::before {
+    content: "\f53a";
+}
+
+header li.familial::before {
+    content: "\f1ae";
+}
+
+header li.romantique::before {
+    content: "\f004";
+}
+
+header li.animaux::before {
+    content: "\f6d3";
+}
