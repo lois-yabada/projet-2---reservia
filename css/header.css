@@ -97,7 +97,7 @@ header i {
 }
 
 header input {
-    /* border: none; */
+   
     width: calc( 100% - 5rem);
     font-size: 1.1em;
     font-weight: bold;
@@ -204,6 +204,17 @@ header p.info::before {
     font-weight: bold;
     border: 1px solid var(--gris);
 }
+header button {
+    width: 7rem;
+    border-radius: 0 1rem 1rem 0;
+    
+}
+
+header button::after {
+    content: "\Rechercher";
+    font-family: 'Raleway', sans-serif;
+    
+}
 
 }
 
@@ -234,10 +245,21 @@ header p.info::before {
              
     }
     header input {
-    width: 380px;
+    width: 280px;
     font-size: 1.1em;
     font-weight: bold;
     border: 1px solid var(--gris);
+}
+header button {
+    width: 7rem;
+    border-radius: 0 1rem 1rem 0;
+    
+}
+
+header button::after {
+    content: "\Rechercher";
+    font-family: 'Raleway', sans-serif;
+    
 }
 header div{
     margin-top: 1rem;

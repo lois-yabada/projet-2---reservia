@@ -88,9 +88,8 @@ footer a {
 @media screen AND (min-width:768px) {
     
     footer {
-        height: 150px; 
+        height: 150px;
         display: flex;
-        flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-evenly;
     }
