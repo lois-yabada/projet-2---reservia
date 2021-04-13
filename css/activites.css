@@ -38,7 +38,7 @@
 
 #activite h1 {
     grid-area: titre;
-    margin: 0;
+    margin: 1rem;
 }
 
 #activite figcaption {
@@ -66,6 +66,8 @@
     height: calc(100% - 56px);
 }
 
+}
+
 @media screen AND (min-width: 1024px) {
 
     #activite figure img {
@@ -91,5 +93,9 @@
         height: 100%;
         margin: 0;
     }
+    #activite h1 {
+    grid-area: titre;
+    margin: .1rem;
+}
 
 }
