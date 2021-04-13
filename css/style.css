@@ -1,11 +1,8 @@
 @import url("header.css");
-@import url("articles.css");
-@import url("activites.css");
 :root {
     --bleu: #0065fc;
     --bclair: #DEEBFF;
     --gris: #f2F2F2;
-    --ombre: 0 0 10px #bfbfbf;
 }
 
 body {
@@ -15,25 +12,24 @@ body {
 
 body>* {
     width: 100%;
-    max-width: 1340px;
+    max-width: 1300px;
     margin: auto;
 }
 
-
-
-main .populaires {
-    background-color: var(--gris);
+body>*:not(header) {
+    padding: 1rem;
+    width: calc(100% - 2rem);
 }
 
 main {
-    background-color: white;
+    background-color: var(--gris);
 }
 
 h1 {
     font-size: 1.5em;
 }
 
-h2, figcaption {
+h2 {
     font-size: 1.1em;
     font-weight: bold;
 }
@@ -43,10 +39,6 @@ p {
     font-weight: normal;
 }
 
-.populaires {
-    padding: 1rem;
-}
-
 .populaires h1 {
     display: flex;
     justify-content: space-between;
@@ -54,103 +46,130 @@ p {
 
 .populaires h1::after {
     content: "\f201";
-    font-family: "Font Awesome 5 Free";
+    font-family: 'Font Awesome 5 Free';
 }
 
+article {
+    background-color: white;
+    border-radius: 1rem;
+}
+
+article img {
+    grid-area: photo;
+    width: 100%;
+    height: calc(100% - 4px);
+    object-fit: cover;
+}
+
+.populaires article {
+    display: grid;
+    grid-template-areas: "photo titre" "photo description" "photo etoiles";
+    margin-bottom: 1rem;
+    column-gap: 1rem;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: repeat(3, 3rem);
+}
+
+.populaires article img {
+    border-radius: 1rem 0 0 1rem;
+    border: 2px solid white;
+}
+
+.etoiles {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: bold;
+    grid-area: etoiles;
+}
+
+.etoiles::before {
+    color: var(--bleu);
+}
+
+.etoiles::after {
+    color: var(--gris);
+}
+
+.cinqEtoiles::before {
+    content: "\f005\f005\f005\f005\f005";
+}
+
+.quatreEtoiles::before {
+    content: "\f005\f005\f005\f005";
+}
+
+.quatreEtoiles::after {
+    content: "\f005";
+}
+
+/* debugage */
 figure img {
     width: 200px;
 }
 
-#hebergement {
-    padding: 1rem;
+body * {
+    /* border: 1px solid red; */
 }
 
-#hebergement p.plus {
-    font-weight: bold;
-    margin-top: 1rem;
+/* fin debuggage */
+
+/*
+balise1
+{
+    propriete1: valeur1;
+    propriete2: valeur2;
+    propriete3: valeur3;
 }
 
-footer {
-    height: 300px;
-    background-color: var(--gris);
-    padding: 1rem;
-    width:calc(100% - 2rem);
+balise2
+{
+    propriete1: valeur1;
+    propriete2: valeur2;
+    propriete3: valeur3;
+    propriete4: valeur4;
 }
 
-footer h2 {
-    font-size: 13px;
+balise3
+{
+    propriete1: valeur1;
 }
 
-footer a {
-    font-size: 12px;
+balise1
+{
+    propriete1: valeur1;
+    propriete2: valeur2;
+    propriete3: valeur3;
 }
 
-@media screen AND (min-width:768px) {
-    
-    footer {
-        /* height: 170px; */
-        display: flex;
-        /* flex-direction: column; */
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-    footer section {
-        /* margin: 30px; */
-        width: 160px;
-    }
-    footer h2 {
-        font-size: 15px;
-    }
-    footer a {
-        font-size: 13px;
-    }
-
-    .populaires{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-    
-    
-    
-    
+balise2
+{
+    propriete1: valeur1;
+    propriete2: valeur2;
+    propriete3: valeur3;
+    propriete4: valeur4;
 }
 
-@media screen AND (min-width:1024px){
-    main {
-        border-radius: 1rem 1rem;
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-    }
-    .populaires {
-        border-radius: 1rem 1rem;
-        max-width: 420px;
-    }
-    #hebergement {
-        border-radius: 1rem 1rem;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        background: var(--gris);
-        width: 100%;
-        margin-right: 40px;
-        }
-    #hebergement h1, p{
-        width: 100%;
-    }
-    footer {
-        margin-top: 40px;
-        flex-wrap: wrap;
-        max-width: 100%;
-    }
-    footer section {
-        width: 300px;
-    }
-    footer h2 {
-        font-size: 18px;
-    }
-    footer a {
-        font-size: 14px;
-    }
+balise3
+{
+    propriete1: valeur1;
 }
+
+balise1
+{
+    propriete1: valeur1;
+    propriete2: valeur2;
+    propriete3: valeur3;
+}
+
+balise2
+{
+    propriete1: valeur1;
+    propriete2: valeur2;
+    propriete3: valeur3;
+    propriete4: valeur4;
+}
+
+balise3
+{
+    propriete1: valeur1;
+}
+*/

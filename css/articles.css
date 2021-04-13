@@ -1,0 +1,181 @@
+article {
+    background-color: white;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--ombre);
+}
+
+article img {
+    grid-area: photo;
+    width: 100%;
+    height: calc(100% - 4px);
+    object-fit: cover;
+}
+
+article > *:not(img){
+
+    margin: 0.5rem 0.5rem 0 0;
+}
+
+article aside{
+    padding-bottom: 1rem;
+}
+
+.populaires article {
+    display: grid;
+    grid-template-areas:
+        "photo titre"
+        "photo description"
+        "photo etoiles";
+    column-gap: 1rem;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 1fr 1fr 2fr;
+    height: 139px;
+}
+
+.populaires article img {
+    border-radius: 1rem 0 0 1rem;
+    border: 2px solid white;
+}
+
+.populaires article aside{
+    
+align-self: end;
+}
+
+#hebergement article {
+    display: block;
+}
+
+#hebergement article img {
+    border-radius: 1rem 1rem 0 0;
+    border: 2px solid white;
+    grid-area: photo;
+    width: calc(100% - 4px);
+    height: 114px;
+    object-fit: cover;
+}
+
+#hebergement article > *:not(img){
+    padding-left:1rem;
+    height:;
+}
+
+
+
+.etoiles {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: bold;
+    grid-area: etoiles;
+}
+
+.etoiles::before {
+    color: var(--bleu);
+}
+
+.etoiles::after {
+    color: var(--gris);
+}
+
+.cinqEtoiles::before {
+    content: "\f005\f005\f005\f005\f005";
+}
+
+.quatreEtoiles::before {
+    content: "\f005\f005\f005\f005";
+}
+
+.troisEtoiles::before {
+    content: "\f005\f005\f005";
+}
+
+.quatreEtoiles::after {
+    content: "\f005";
+}
+
+.troisEtoiles::after {
+    content: "\f005\f005";
+}
+
+@media screen AND (min-width:768px){
+    .populaires{
+        margin-bottom: 1rem;
+    }
+    .populaires h1{
+        width: 100%;
+    }
+
+  .populaires >*:not(h1){
+        border-radius: 1rem 1rem;
+        display:flex;
+        flex-direction: column;
+        flew-wrap: wrap;
+    }
+    
+.populaires article {
+    height: auto;
+    max-width: 220px;
+    }
+
+.populaires article img {
+    border-radius: 1rem 1rem 0 0;
+    border: 2px solid white;
+    grid-area: photo;
+    width: calc(100% - 4px);
+    height: 140px;
+    object-fit: cover;
+}
+
+.populaires article > *:not(img){
+    padding-left:1rem;
+}   
+#hebergement {
+        margin-bottom: 1rem;
+        background: var(--gris);
+        border-radius: 1rem 1rem;
+        display: flex; 
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    #hebergement h1, p.plus{
+        width: 100%;
+    }
+
+    #hebergement article{
+        max-width:230px;
+    }
+}
+
+@media screen AND (min-width:1024px){
+
+    .populaires article {   
+    display: grid;
+    grid-template-areas:
+        "photo titre"
+        "photo description"
+        "photo etoiles";
+    column-gap: 1rem;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 1fr 1fr 2fr;
+    height: 145px;
+    max-width:350px;
+   
+}
+.populaires article img {
+
+    border-radius: 1rem 0 0 1rem;
+    border: 2px solid white;
+
+}
+    
+    #hebergement article{
+         
+        max-width:247px;
+       
+       
+        
+    }
+    
+
+}
