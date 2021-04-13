@@ -14,20 +14,22 @@ header nav a {
     text-decoration: none;
 }
 
-header nav a, header nav a:visited{
-    color:black;
+header nav a, header nav a:visited {
+    color: black;
 }
 
 header nav a:first-of-type {
     grid-area: logo;
+    width:;
 }
 
-header nav a:nth-of-type(2),
-header nav a:nth-of-type(3){
+header nav a:nth-of-type(2), header nav a:nth-of-type(3) {
     border-bottom: 1px solid var(--gris);
 }
+
 header nav a:nth-of-type(2) {
     grid-area: hebergements;
+    color: var(--bleu);
 }
 
 header nav a:nth-of-type(3) {
@@ -42,12 +44,11 @@ header nav a:last-of-type {
     color: var(--bleu);
 }
 
-header nav a:hover{
+header nav a:hover {
     color: var(--bleu);
 }
 
-header nav a:nth-of-type(2):hover,
-header nav a:nth-of-type(3):hover{
+header nav a:nth-of-type(2):hover, header nav a:nth-of-type(3):hover {
     border-bottom: 1px solid var(--bleu);
 }
 
@@ -56,7 +57,7 @@ header section {
 }
 
 header img {
-    height: 4rem;
+    height: 3rem;
 }
 
 header button {
@@ -78,7 +79,6 @@ header button::after {
 header label {
     display: flex;
     align-items: center;
-    /* border: 1px solid var(--gris); */
     border-radius: 1rem;
 }
 
@@ -104,14 +104,8 @@ header input {
     border: 1px solid var(--gris);
 }
 
-input marseille, france {}
-
-
-
 
 header ul {
-    /* border: 1px solid var(--gris); */
-    /* font-weight: bold; */
     display: flex;
     padding: 0;
     flex-wrap: wrap;
@@ -120,18 +114,19 @@ header ul {
 header li {
     display: flex !important;
     border: 2px solid var(--gris);
-    border-radius: 1rem;
-    color: var(--bleu);
+    border-radius: 2rem;
+    color: black;
     align-items: center;
     margin-right: .5rem;
     margin-bottom: .5rem;
     padding-right: 1rem;
+    font-weight: bold;
 }
 
 header li::before {
     background-color: var(--bclair);
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
     align-items: center;
     justify-content: center;
@@ -139,7 +134,7 @@ header li::before {
     margin-right: .5rem;
     margin-left: -.1rem;
     font-family: 'Font Awesome 5 Free';
-    font-weight: bold;
+    color: var(--bleu);
 }
 
 header li.eco::before {
@@ -156,4 +151,102 @@ header li.romantique::before {
 
 header li.animaux::before {
     content: "\f6d3";
+}
+
+header p.info {
+    font-size: 90%;
+    align-items: center;
+    justify-content: flex-start;
+    display: flex;
+}
+
+header p.info::before {
+    content: "\f129";
+    border: 2px solid var(--gris);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-right: .12rem;
+    margin-left: -.1rem;
+    font-family: 'Font Awesome 5 Free';
+    color: var(--bleu);
+    font-weight: bold;
+}
+
+@media screen AND (min-width:768px) {
+    header nav {
+        margin-bottom: 2rem;
+        grid-template-areas:
+            "logo hebergements activites inscrire";
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        grid-template-rows: 5rem;
+
+}
+    header nav a:nth-of-type(2), header nav a:nth-of-type(3) {
+        border-top: 1px solid var(--gris);
+        border-bottom: none;
+}
+    header nav a:nth-of-type(2):hover, header nav a:nth-of-type(3):hover {
+        border-top: 1px solid var(--bleu);
+        border-bottom: none;
+    }
+
+    header nav a:first-of-type {
+         width: 415px;
+         justify-content: flex-start ;
+    }
+    header input {
+    width: 250px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: 1px solid var(--gris);
+}
+
+}
+
+@media screen AND (min-width:1024px) {
+
+    header nav {
+        margin-bottom: 3rem;
+        grid-template-areas: "logo hebergements activites inscrire";
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        
+    }
+    header nav a {
+        padding-top: 1.5rem;
+}
+    header nav a:nth-of-type(2), header nav a:nth-of-type(3) {
+        border-top: 1px solid var(--gris);
+        border-bottom: none;
+}
+    header nav a:nth-of-type(2):hover, header nav a:nth-of-type(3):hover {
+        border-top: 1px solid var(--bleu);
+        border-bottom: none;
+    }
+
+    header nav a:first-of-type {
+        margin-right: 780px;
+        width:auto;
+             
+    }
+    header input {
+    width: 380px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: 1px solid var(--gris);
+}
+header div{
+    margin-top: 1rem;
+    display: flex;
+}
+header div h2 {
+    align-self: center;
+    margin-right: 30px;
+
+}
+
 }
