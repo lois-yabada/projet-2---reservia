@@ -88,14 +88,14 @@ footer a {
 @media screen AND (min-width:768px) {
     
     footer {
-        /* height: 170px; */
+        height: 150px; 
         display: flex;
-        /* flex-direction: column; */
+        flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-evenly;
     }
     footer section {
-        /* margin: 30px; */
+       
         width: 160px;
     }
     footer h2 {
@@ -140,6 +140,7 @@ footer a {
         width: 100%;
     }
     footer {
+        height: 170px;
         margin-top: 40px;
         flex-wrap: wrap;
         max-width: 100%;
